@@ -64,7 +64,7 @@ let numRandom = Math.random();
 console.log(numRandom)
 
 // Use o Math.random para gerar um número inteiro entre 1 e 10 e exiba esse número no console.
-let numRandom2 = parseInt(Math.random() * 10+ 1);
+let numRandom2 = parseInt(Math.random() * 10 + 1);
 
 console.log(numRandom2)
 
