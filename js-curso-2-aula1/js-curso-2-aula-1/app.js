@@ -3,7 +3,8 @@
 
 // let paragrafo = document.querySelector('p')
 // paragrafo.innerHTML = 'Escolha um número entre 1 e 10'
-
+let listaDeNumerosSorteados = [];
+let numeroLimite = 10;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
@@ -48,7 +49,25 @@ function verificarChute() {
 }
 
 function gerarNumeroAleatorio() {
-   return parseInt(Math.random() * 10 + 1);
+   let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
+
+   let quantidadeElementosLista = listaDeNumerosSorteados.length;
+
+   //se o numero de elementos na lista for igual a quantidade de numero disponiveis limpa a lista
+   if(quantidadeElementosLista == numeroLimite){
+      listaDeNumerosSorteados = [];
+   }
+
+   //includes = verifica se o elemento está na lista
+   if(listaDeNumerosSorteados.includes(numeroEscolhido)){
+      return gerarNumeroAleatorio();
+   } else{
+      //push = adiciona na lista
+      listaDeNumerosSorteados.push(numeroEscolhido);
+      console.log(listaDeNumerosSorteados)
+      return numeroEscolhido;
+
+   }
 }
 
 function limparCampo() {
