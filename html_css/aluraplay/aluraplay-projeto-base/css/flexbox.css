@@ -1,0 +1,43 @@
+/*cabecalho*/
+
+.cabecalho__container{
+    display: flex; /* comportamento padrão = todos os elementos um ao lado do outro*/
+    /* display flex exibe elementos em nível de bloco. */
+    /* display inline-flex exibe os elementos em linha. */
+    justify-content: space-between; 
+    align-items: center;
+    position: fixed; /*posição fixa*/
+    top: 0; /*0 de distancia do top*/
+}
+
+.cabecalho__pesquisar__item{
+    display: none;
+}
+
+@media (min-width: 834px) { /*quando a tel é maior que 834px aparece o pesquisar*/
+    .cabecalho__pesquisar__item{
+        display: block;
+    }
+}
+
+/* seção superior */
+
+.superior__secao__container{
+    display: flex;
+    align-items: center;
+}
+
+/*rodape*/
+
+.rodape__container{
+    display: flex;
+    /*flex-direction: column;
+    flex-wrap: wrap;*/
+    flex-flow: column wrap; /*mesmo efeito das 2 linhas acima*/
+}
+
+@media (min-width: 834px){
+    .rodape__container{
+        justify-content: space-between;
+    }
+}
