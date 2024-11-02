@@ -132,7 +132,7 @@
 .videos__item{
 	height: 303px;
 	width: 280px;
-	flex-grow: 1; /*aumenta de acordo com o espaço disponivel*/
+	flex-grow: 1; /*aumenta de acordo com o espaço disponivel, quanto maior o valor inserido, mais um item poderá crescer*/
 }
 
 .descricao-video{
